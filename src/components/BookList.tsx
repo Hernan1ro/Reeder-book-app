@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { useTable, useSortBy, useFilters, useGlobalFilter } from "react-table";
+import { Link } from "react-router-dom";
 
 import { Book } from "../types";
 
@@ -55,6 +56,15 @@ export const BookList = ({ books }: Props) => {
 
   const { globalFilter }: any = state;
 
+  //------------------ get id number ----------------------- //
+  function extractIdFromLink(link: string): string | null {
+    const url = new URL(link);
+    const segments = url.pathname.split("/");
+    const id = segments[segments.length - 1];
+
+    return id ? id : null;
+  }
+
   return (
     <div className="w-full grid place-items-center">
       <input
@@ -62,7 +72,7 @@ export const BookList = ({ books }: Props) => {
         type="text"
         value={globalFilter || ""}
         onChange={(e) => setGlobalFilter(e.target.value)}
-        placeholder="Buscar libro"
+        placeholder="Buscar"
       />
 
       <table
@@ -104,7 +114,13 @@ export const BookList = ({ books }: Props) => {
                 {row.cells.map((cell: any) => {
                   return (
                     <td {...cell.getCellProps()} className="p-2">
-                      <a href={cell.row.original.url}>{cell.render("Cell")}</a>
+                      <Link
+                        to={`bookdetail/${extractIdFromLink(
+                          cell.row.original.url
+                        )}`}
+                      >
+                        {cell.render("Cell")}
+                      </Link>
                     </td>
                   );
                 })}

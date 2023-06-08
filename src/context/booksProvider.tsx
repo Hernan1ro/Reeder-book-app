@@ -1,22 +1,33 @@
+import { ReactNode } from "react";
 import { useState, createContext } from "react";
+import { Book } from "../types";
 
-const AccessTokenContext = createContext();
+interface Props {
+  children: ReactNode;
+}
 
-const AccessTokenProvider = ({ children }) => {
-  const [token, setToken] = useState("");
-  const [newUser, setNewUser] = useState({});
+interface FavoritesTypes {
+  favBooks: Book[];
+  setFavBooks: (books: Book[]) => void;
+}
+
+const FavoritesContext = createContext<FavoritesTypes>({
+  favBooks: [],
+  setFavBooks: () => {},
+});
+
+const FavoritesProvider = ({ children }: Props) => {
+  const [favBooks, setFavBooks] = useState<Book[]>([]);
   return (
-    <AccessTokenContext.Provider
+    <FavoritesContext.Provider
       value={{
-        token,
-        setToken,
-        newUser,
-        setNewUser,
+        favBooks,
+        setFavBooks,
       }}
     >
       {children}
-    </AccessTokenContext.Provider>
+    </FavoritesContext.Provider>
   );
 };
 
-export { AccessTokenProvider, AccessTokenContext };
+export { FavoritesProvider, FavoritesContext };
