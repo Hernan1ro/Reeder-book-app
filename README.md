@@ -95,7 +95,7 @@ Implementation of unit tests using Jest: Although we recognise the importance of
 Component documentation using Storybook: Although it was not possible to generate component documentation using Storybook on this occasion, it would be valuable to document each component individually, providing examples of use and explaining the properties they accept.
 ```
 
-3.¿Qué harías de manera diferente si se le asignara más tiempo?
+3.What would you do differently if more time was allocated?
 
 ```
 Complete unit tests: I would spend time writing comprehensive tests for key components and functions, ensuring proper coverage and detection of potential bugs.
