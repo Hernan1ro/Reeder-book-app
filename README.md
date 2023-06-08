@@ -15,6 +15,7 @@ A book reading app to enjoy your favorite stories anytime, anywhere. Immerse you
   - [Desktop](#desktop)
   - [Mobile](#mobile)
 - [Technologies](#technologies)
+- [Questions](#questions)
 
 <h2 id="scripts">🔥 Getting started</h2>
 
@@ -75,3 +76,33 @@ VITE_API_BOOKS="https://anapioficeandfire.com/api/"
 3. Vite.js
 4. Typescript
 5. React-router-dom
+
+<h2 id="questions"> Questions</h2>
+
+1.How did you decide on the technical and architectural choices used as part of your solution?
+
+```
+I chose to use React.js as the main library because of its popularity and ability to build interactive user interfaces. In addition, I used React Table to display the list of books in tabular form with advanced functionalities, React Router DOM to handle navigation between pages, Tailwind CSS for styling and Formik for form handling. These options allowed me to develop efficiently and take advantage of specific features of each library.
+```
+
+2.Are there any improvements you left pending in your submission?
+
+```
+During the development of this project, due to health constraints (I got Covid), there were some improvements that were left pending:
+
+Implementation of unit tests using Jest: Although we recognise the importance of unit tests to ensure code quality, it was not possible to complete the tests in this deliverable. It would be beneficial to implement tests to verify the expected behaviour of key components and functionalities.
+
+Component documentation using Storybook: Although it was not possible to generate component documentation using Storybook on this occasion, it would be valuable to document each component individually, providing examples of use and explaining the properties they accept.
+```
+
+3.¿Qué harías de manera diferente si se le asignara más tiempo?
+
+```
+Complete unit tests: I would spend time writing comprehensive tests for key components and functions, ensuring proper coverage and detection of potential bugs.
+
+Generate Storybook documentation: I would create story files for each component, providing examples of usage and detailed descriptions of properties and behaviours.
+
+Improve the user experience: I would work on improving the user interface and usability of the application, optimising the navigation flow, adding animations and making sure the application is intuitive and easy to use for users.
+
+Refactoring and optimising the code: I would use the additional time to review and improve the structure and efficiency of the existing code, looking for refactoring and optimisation opportunities to achieve cleaner, more readable code and improved performance.
+```
