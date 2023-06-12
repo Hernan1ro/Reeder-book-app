@@ -84,8 +84,8 @@ const BookDetail = () => {
             </span>
             <button
               onClick={() => addFavorite(book)}
-              className={`p-2 mt-2 bg-${
-                !isAdded ? "pink-500" : "cyan"
+              className={`p-2 mt-2  ${
+                !isAdded ? "bg-pink-500" : "bg-cyan"
               } hover:bg-${
                 !isAdded ? "pink-400" : "cyan-300"
               } text-white font-bold rounded-md`}
